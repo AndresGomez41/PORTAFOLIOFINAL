@@ -1,0 +1,353 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600&display=swap');
+
+
+
+:root{
+    --blueColor: #34b0be;
+    --darkColor: hsl(237, 85%, 5%);
+    --LightColor: #e5e0e0f1;
+    --greyColor: #32374a;
+    --blackColor: black;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    background-color: var(--darkColor);
+    color: var(--LightColor);
+   
+}
+nav{
+    background-color: var(--darkColor);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .5rem 1.25rem;
+    height: 61px;
+}
+.home{
+    color: var(--blueColor);
+}
+
+
+input#menu-hamburguesa{
+    visibility: hidden;
+}
+
+input#menu-hamburguesa ~ ul {
+   
+    background-color: var(--darkColor);
+    color: var(--LightColor);
+    list-style: none;
+    position: absolute;
+    left: 0;    
+    top: 60px;  
+    width: 100%;
+    height: calc(100vh - 58px); 
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem 1rem;
+    z-index: 10;
+    display: none;
+}
+
+input#menu-hamburguesa:checked ~ ul{
+    display: flex;
+}
+
+
+
+
+.contenedor-presentacion{
+  
+    
+    width: 100vw;
+    
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    
+   
+}
+.texto-azul{
+    color: var(--blueColor);
+}
+
+.contenedor-datos{    
+    font-size: 3vw;
+    font-weight: 100;
+    padding: .5rem .5rem;
+    z-index: 1;
+    
+
+}
+
+.contenedor-foto>img{
+   
+    width: 100%;
+    
+    object-fit: cover;
+    align-items:flex-end; 
+   
+}
+
+.contenedor-foto{
+    position: relative;
+}
+
+.contenedor-foto::after{
+    content: " ";/*CONTENIDO DEL ELEMENTO , vacio*/
+    width: 250px;
+    height: 250px;
+    background-color: var(--greyColor);
+    border-radius: 50%;
+    display: inline-block;
+    position:absolute;
+    top: 0;
+    bottom: 0;
+    right:calc(50% - 125px);
+    z-index: -1;
+    
+}
+
+.contenedor-social{
+     
+    font-size: 3vw;
+    font-weight: 100;
+}
+
+.redes{
+    display: flex;      
+    gap: 1rem;
+}
+
+.redes div{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    padding: 1rem;
+    
+    background-color: aliceblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+    
+.contenedor-empresas{
+    height: 5em;
+    width: 23em;
+    border-radius: 1rem;
+    background-color: var(--greyColor);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin: auto ;
+}
+
+.contenedor-empresas > img{
+    
+    border-radius: 1rem;
+    height: 3em;
+    width: 5em;
+    background-color: var(--LightColor);
+    object-fit: contain;
+    padding: 0.3rem;
+    
+    
+}
+
+.seccion{
+    text-align: center;        
+}
+.subtitulo{
+    color: var(--blueColor);
+    font-size: 2em;
+    padding: .5em 1rem;
+   
+}
+p{
+    padding: 0 1.3rem;
+}
+
+.contenedor-cards{
+    display: flex;
+    gap: 1rem;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    padding: 1rem;
+    
+}
+/*estilar scroll bar*/
+/*.contenedor-cards::-webkit-scrollbar{
+    height: 2px;
+    opacity: 0.5;
+}*/
+.card-servicio {
+    width: 250px;
+    min-width: 250px;
+    height: 300px;
+    border-radius: .3rem;
+    background-color: aliceblue;
+    border: 1px solid darkgoldenrod ; 
+ 
+}
+
+.card-servicio > img{
+    padding-top: 1.2rem;
+}
+.card-servicio > h3{
+    color: var(--blackColor);
+    padding: .4rem;
+    font-size: 1.7rem;
+}
+.card-servicio > small{
+    display: block;
+    color: var(--greyColor);
+    padding-top: 1rem;
+    padding-bottom: 3rem;
+    font-size: 1.1rem;
+}
+
+
+.habilidad{
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem 1rem;
+    text-align: justify;
+}
+
+.seccion.habilidades{
+    padding-left: 3.4rem;
+}
+
+/* background: */
+progress::-webkit-progress-bar {
+    background-color: #f9f5f2; 
+    height: 1.25rem;
+    width: 80vw;
+    border-radius: 1rem;
+}
+progress {
+    width: 80vw;
+    border-radius: 1rem;
+    background-color: #f9f5f2;
+    height: 1.25rem;
+    border-radius: 1rem;
+    color: var(--blueColor);
+}
+/* value: */
+progress::-webkit-progress-value {
+    background-color: var(--blueColor);
+    border-radius: 1rem;
+}
+progress::-moz-progress-bar {
+    background-color: var(--blueColor);
+    border-radius: 1rem;
+}
+
+.galeria-proyectos{
+    display: flex;
+    overflow-x: scroll;
+    gap: 1.5rem;
+
+}
+.galeria-proyectos > img{
+    width: 300px;
+    object-fit: contain;
+    margin-bottom: 5px;
+    margin-left: 20px;
+}
+
+.contenedor-contacto{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;    
+    padding:1rem 0;
+    
+}
+
+.contenedor-contacto > div{
+    width: 100px;
+    height: 100px;
+    border-radius: 1rem;  
+    background-color: var(--LightColor);     
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+}
+
+footer{
+    text-align: center;
+    padding: 0.3rem 1rem;
+    background-color:var(--blackColor);
+
+}
+
+@media screen and ( min-width:620px ){
+    nav > label{
+        display: none;
+    }    
+
+    input#menu-hamburguesa ~ ul{
+
+        color: var(--LightColor);        
+        position:static;
+        background-color: transparent;
+        display: flex;
+        flex-direction: row;
+        height: auto;
+        justify-content: flex-end;
+    
+    }
+    nav{
+        padding: 0;
+        font-size: 70%;        
+    }
+    p{
+        margin: 0rem 2rem; 
+        font-size: large;
+    }
+    
+}
+
+
+@media screen and ( min-width:930px ){
+
+    nav{
+        padding: .5rem 3rem;
+        font-size: 100%;        
+    }
+    p{
+        margin: 0rem 10rem; 
+        font-size: larger;
+    }
+    .contenedor-empresas{
+        height: 7em;
+        width: 40em;   
+        gap: 3rem;     
+    }
+    .contenedor-empresas > img{
+        height: 5em;
+        width: 8em;   
+        gap: 3rem;     
+    }
+}
+
+
+
+
+
