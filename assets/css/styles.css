@@ -70,13 +70,11 @@ input#menu-hamburguesa:checked ~ ul{
 
 
 
-.contenedor-presentacion{
+.contenedor-presentacion{   
    
-    border:1px solid red ;
     height: var(--height-header);
     width: 100%;       
-    position: relative;
-   
+    position: relative;   
 }
 .texto-azul{
     color: var(--blueColor);
@@ -84,7 +82,7 @@ input#menu-hamburguesa:checked ~ ul{
 
 .contenedor-datos{    
     
-    border: 1px solid yellow;
+    
     min-width: 100px;
     font-size: .5em;
     font-weight: 100;
@@ -113,14 +111,12 @@ h2.oficio{
 .contenedor-foto{
     height: var(--height-header);
     width: var(--height-header);
-    border: 1px solid greenyellow;
     position: relative;
     left:calc(50% - var(--height-header)/2 );
 }
 .contenedor-foto>img{
    
-    height: var(--height-header);    
-   /* border: 1px solid yellow;*/  
+    height: var(--height-header);      
 }
 
 
@@ -138,11 +134,10 @@ h2.oficio{
 }
 
 .contenedor-social{
-    border: 1px solid slateblue;
     width: fit-content;
     position: absolute;
     top: 35px;
-    right: 0;
+    right: calc(50% - 138px);
 }
 
 
@@ -194,16 +189,13 @@ h2.texto-exp{
 }
 
 .contenedor-empresas > img{
-    
     border-radius: 1rem;
     height: 2.5rem;
     width: 4rem;
     background-color: var(--LightColor);
     object-fit: contain;
-    padding: 0.3rem;
-    
-    
-}
+    padding: 0.3rem; 
+ }
 
 .seccion{
     text-align: center;        
@@ -230,10 +222,20 @@ p{
     
 }
 /*estilar scroll bar*/
-/*.contenedor-cards::-webkit-scrollbar{
-    height: 2px;
-    opacity: 0.5;
-}*/
+.contenedor-cards::-webkit-scrollbar,  .galeria-proyectos::-webkit-scrollbar{
+    height: 5px;
+    border: 1px solid rgb(34, 143, 17);
+    background-color: #114656;
+    border-radius: 1rem;
+}
+.contenedor-cards::-webkit-scrollbar-thumb, .galeria-proyectos::-webkit-scrollbar-thumb {
+    background-color: #155e85;
+    height: 5px;
+    border-radius: 1rem;
+    border: 1px solid #0fc5bf;
+
+}
+
 .card-servicio {
     width: 250px;
     min-width: 250px;
@@ -295,7 +297,7 @@ progress::-moz-progress-bar {
 .galeria-proyectos{
     display: flex;
     overflow-x: scroll;
-    gap: 1.5rem;
+    
 
 }
 .galeria-proyectos > img{
@@ -335,6 +337,36 @@ footer h5{
 
 }
 
+
+@media screen and ( min-width:316px ){    
+    .contenedor-social{
+        top: 20px;
+        right: 0;
+    }
+    
+    h2.texto-azul.exp{
+        font-size: 1.8rem;
+        font-weight: 600;
+    }
+
+    h2.texto-exp{
+        font-size: 1.25rem;
+        font-weight: 500;
+    }
+}
+
+@media screen and ( min-width:370px ){ 
+    .contenedor-presentacion{   
+        height: var(--height-header);
+        width: 370px;    
+        margin: 0 auto;    
+    }
+    .contenedor-empresas{        
+        width: 300px;
+        margin: 0 auto 0 auto; 
+    }
+}
+
 @media screen and ( min-width:620px ){
     nav > label{
         display: none;
@@ -363,12 +395,20 @@ footer h5{
 }
 
 
-@media screen and ( min-width:584px ){
-}
+@media screen and ( min-width:700px ){
+    
+    :root{
+        --height-header: 350px;
+        --size-circle: 400px;
+        --size-icon-contacto: 120px;
+    }
+    
+    .subtitulo{
+        padding-top: 2.5rem;
+    }
 
-@media screen and ( min-width:930px ){
     .contenedor-presentacion{        
-        width: 70%;
+        width: 660px;
         margin-left: auto;
         margin-right: auto;
     }
@@ -378,20 +418,80 @@ footer h5{
         font-size: 100%;        
     }
     p{
-        margin: 0rem 10rem; 
+        width: 700px;
+        margin: 0rem auto; 
         font-size: larger;
     }
     .contenedor-empresas{
-        height: 7em;
-        width: 40em;   
-        gap: 3rem;     
+        height: 5em;
+        width: 450px;   
+        gap: 2rem;     
     }
     .contenedor-empresas > img{
-        height: 5em;
-        width: 8em;   
-        gap: 3rem;     
+        height: 50px;
+        width: 80px;     
+    }
+
+
+    .contenedor-datos{           
+        min-width: 230px;
+        left: 70px;
+        top: 0;
+    }
+    .contenedor-datos h2{
+        font-size: 40px;
+        font-weight: 500;
+    }    
+    .nombre, h2.texto-azul.exp{
+        font-size: 2.8rem;
+    }
+    h2.oficio, h2.texto-exp{
+        font-size: 25px;
+        font-weight: 300;
+    }    
+    .contenedor-social{
+        top: 25;
+        right: calc(50% - 240px);
+    }
+    .redes{
+        gap: 1rem;
+    }
+    .redes div{
+        width: 40px;
+        height: 40px;
+    }
+    .redes img{
+        width: 22px;
+    }
+
+    .contenedor-cards{
+        justify-content: center;
+        gap: 5vw;
+        overflow-x: hidden;
+    }
+
+    progress {
+        width: 700px;
+        margin: 0 auto;
+    }
+    .seccion.habilidades label{
+        display: inline-block;
+        width: 700px;
+        margin: auto;
     }
 }
+@media screen and ( min-width:1080px ){
+
+    .galeria-proyectos{
+        width: 1080px;
+        margin: 0 auto;
+        overflow-x: hidden;
+    }
+    .galeria-proyectos img{
+        height: 190px;
+    }
+}
+
 
 
 
