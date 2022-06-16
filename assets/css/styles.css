@@ -73,7 +73,7 @@ input#menu-hamburguesa:checked ~ ul{
 
 
 .contenedor-presentacion{   
-   
+    
     height: var(--height-header);
     width: 100%;       
     position: relative;   
@@ -136,10 +136,12 @@ h2.oficio{
 }
 
 .contenedor-social{
+    
     width: fit-content;
     position: absolute;
-    top: 35px;
-    right: calc(50% - 138px);
+    top:20px;
+    right: 3px;
+    
 }
 
 
@@ -159,18 +161,17 @@ h2.texto-exp{
     margin-top: .5rem;
 }
 .redes div{
-    width: 40px;
-    height: 40px;
+    width: 27px;
+    height: 27px;
     border-radius: 50%;    
     background-color: aliceblue;
     display: flex;
     align-items: center;
     justify-content: center;
-    position:relative;
-    right: 11px;
+    
 }
 .redes img{
-    width: 20px;
+    width: 15px;
 }
 
    
@@ -344,8 +345,8 @@ footer h5{
 
 @media screen and ( min-width:316px ){    
     .contenedor-social{
-        top: 20px;
-        right: 0;
+        top: 0px;
+        right: 3px;
     }
     
     h2.texto-azul.exp{
@@ -356,6 +357,18 @@ footer h5{
     h2.texto-exp{
         font-size: 1.25rem;
         font-weight: 500;
+    }
+
+    .contenedor-social{
+        top: 10px;
+    }
+    .redes div{
+        width: 35px;
+        height: 35px;
+        
+    }
+    .redes img{
+        width: 20px;
     }
 }
 
@@ -369,6 +382,8 @@ footer h5{
         width: 300px;
         margin: 0 auto 0 auto; 
     }
+
+    
 }
 
 @media screen and ( min-width:620px ){
