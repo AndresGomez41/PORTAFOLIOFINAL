@@ -35,6 +35,8 @@ nav{
     align-items: center;
     padding: .5rem 1.25rem;
     height: 61px;
+    position: relative;
+    z-index: 99;
 }
 .home{
     color: var(--blueColor);
@@ -157,16 +159,18 @@ h2.texto-exp{
     margin-top: .5rem;
 }
 .redes div{
-    width: 25px;
-    height: 25px;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;    
     background-color: aliceblue;
     display: flex;
     align-items: center;
     justify-content: center;
+    position:relative;
+    right: 11px;
 }
 .redes img{
-    width: 15px;
+    width: 20px;
 }
 
    
@@ -182,7 +186,7 @@ h2.texto-exp{
     justify-content: center;
     align-items: center;
     gap: 1rem;
-    z-index: 12;
+    z-index: 2;
     position: relative;
     top: -10px;
     
